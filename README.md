@@ -7,7 +7,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img align="right" src="images/screenshot1.png" alt="Logo" height="350">
+<img align="right" src="images/screenshot1.png" alt="Logo" height="420">
 
 FiitApp is an Android app that connects to a physical scale, through an <b>Arduino Board</b> and a <b>Wireless Module</b>, and stores the weights on a <b>Firebase Database.</b>
 The app retrives data from the DB and displays them.<br/>
