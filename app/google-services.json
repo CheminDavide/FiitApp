@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "863593016589",
+    "firebase_url": "https://fiit-61454-default-rtdb.firebaseio.com",
+    "project_id": "fiit-61454",
+    "storage_bucket": "fiit-61454.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863593016589:android:794c29a9814399cf621444",
+        "android_client_info": {
+          "package_name": "it.polito.ic2020.did2020.fiitapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863593016589-7jeeo24j0ojes021ooqsshga8cbal2mb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoX5-pmT6UcPMYi31T7yRknK-dQNTaH2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863593016589-7jeeo24j0ojes021ooqsshga8cbal2mb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

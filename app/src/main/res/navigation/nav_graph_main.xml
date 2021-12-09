@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/frgmt_main">
+    <fragment
+        android:id="@+id/frgmt_main"
+        android:name="it.polito.ic2020.did2020.fiitapp.FragmentMain"
+        android:label="frgmt_main"
+        tools:layout="@layout/frgmt_main">
+        <action
+            android:id="@+id/action_main_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_frgmt_main_to_registrazione1"
+            app:destination="@id/registrazione1" />
+        <action
+            android:id="@+id/action_frgmt_main_to_paziente_homepage"
+            app:destination="@id/paziente_homepage" />
+        <action
+            android:id="@+id/action_frgmt_main_to_nutrizionista_homepage"
+            app:destination="@id/nutrizionista_homepage" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="it.polito.ic2020.did2020.fiitapp.Login"
+        android:label="login"
+        tools:layout="@layout/login">
+        <action
+            android:id="@+id/action_login_to_nutrizionista_homepage"
+            app:destination="@id/nutrizionista_homepage" />
+        <action
+            android:id="@+id/action_login_to_paziente_homepage"
+            app:destination="@id/paziente_homepage" />
+        <action
+            android:id="@+id/action_login_self"
+            app:destination="@id/login" />
+        <argument
+            android:name="mailInserita"
+            android:defaultValue=" " />
+        <action
+            android:id="@+id/action_login_to_registrazione1"
+            app:destination="@id/registrazione1" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrazione"
+        android:name="it.polito.ic2020.did2020.fiitapp.Registrazione"
+        android:label="registrazione"
+        tools:layout="@layout/registrazione">
+        <action
+            android:id="@+id/action_registrazione_to_paziente_homepage"
+            app:destination="@id/paziente_homepage" />
+        <argument
+            android:name="codice_nutrizionista"
+            app:argType="string" />
+        <argument
+            android:name="flagNutrizionista"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_registrazione_to_nutrizionista_homepage"
+            app:destination="@id/nutrizionista_homepage" />
+        <action
+            android:id="@+id/action_registrazione_to_registrazione1"
+            app:destination="@id/registrazione1" />
+    </fragment>
+    <fragment
+        android:id="@+id/paziente_homepage"
+        android:name="it.polito.ic2020.did2020.fiitapp.PazienteHomepage"
+        android:label="paziente_homepage"
+        tools:layout="@layout/paziente_homepage" >
+        <action
+            android:id="@+id/action_paziente_homepage_to_paziente_pesatura"
+            app:destination="@id/paziente_pesatura" />
+        <action
+            android:id="@+id/action_paziente_homepage_to_paziente_obiettivomensile"
+            app:destination="@id/paziente_obiettivomensile" />
+        <action
+            android:id="@+id/action_paziente_homepage_to_paziente_pianoalimentare"
+            app:destination="@id/paziente_pianoalimentare" />
+        <action
+            android:id="@+id/action_paziente_homepage_to_paziente_diariosettimanale"
+            app:destination="@id/paziente_diariosettimanale" />
+        <action
+            android:id="@+id/action_paziente_homepage_to_paziente_approfondimento"
+            app:destination="@id/paziente_approfondimento" />
+        <action
+            android:id="@+id/action_paziente_homepage_to_frgmt_main"
+            app:destination="@id/frgmt_main" />
+        <action
+            android:id="@+id/action_paziente_homepage_to_paziente_foto_profilo"
+            app:destination="@id/paziente_foto_profilo" />
+        <action
+            android:id="@+id/action_paziente_homepage_to_pazienteImpostazioni"
+            app:destination="@id/pazienteImpostazioni" />
+    </fragment>
+    <fragment
+        android:id="@+id/paziente_pesatura"
+        android:name="it.polito.ic2020.did2020.fiitapp.PazientePesatura"
+        android:label="paziente_pesatura"
+        tools:layout="@layout/paziente_pesatura" >
+        <action
+            android:id="@+id/action_paziente_pesatura_to_paziente_homepage"
+            app:destination="@id/paziente_homepage" />
+    </fragment>
+    <fragment
+        android:id="@+id/paziente_obiettivomensile"
+        android:name="it.polito.ic2020.did2020.fiitapp.PazienteObiettivoMensile"
+        android:label="paziente_obiettivomensile"
+        tools:layout="@layout/paziente_obiettivomensile" >
+        <action
+            android:id="@+id/action_paziente_obiettivomensile_to_paziente_homepage"
+            app:destination="@id/paziente_homepage" />
+    </fragment>
+    <fragment
+        android:id="@+id/paziente_pianoalimentare"
+        android:name="it.polito.ic2020.did2020.fiitapp.PazientePianoAlimentare"
+        android:label="paziente_pianoalimentare"
+        tools:layout="@layout/paziente_pianoalimentare" >
+            <action
+                android:id="@+id/action_paziente_pianoalimentare_to_paziente_homepage"
+                app:destination="@id/paziente_homepage" />
+            <action
+                android:id="@+id/action_paziente_pianoalimentare_to_paziente_pianodettaglio"
+                app:destination="@id/paziente_pianodettaglio" />
+    </fragment>
+    <fragment
+        android:id="@+id/paziente_pianodettaglio"
+        android:name="it.polito.ic2020.did2020.fiitapp.PazientePianoDettaglio"
+        android:label="paziente_pianodettaglio"
+        tools:layout="@layout/paziente_pianodettaglio">
+        <action
+            android:id="@+id/action_paziente_pianodettaglio_to_paziente_pianoalimentare"
+            app:destination="@id/paziente_pianoalimentare" />
+    </fragment>
+    <fragment
+        android:id="@+id/paziente_diariosettimanale"
+        android:name="it.polito.ic2020.did2020.fiitapp.PazienteDiarioSettimanale"
+        android:label="paziente_diariosettimanale"
+        tools:layout="@layout/paziente_diariosettimanale" >
+        <action
+            android:id="@+id/action_paziente_diariosettimanale_to_paziente_homepage"
+            app:destination="@id/paziente_homepage" />
+    </fragment>
+    <fragment
+        android:id="@+id/paziente_approfondimento"
+        android:name="it.polito.ic2020.did2020.fiitapp.PazienteApprofondimento"
+        android:label="approfondimento_paziente"
+        tools:layout="@layout/paziente_approfondimento" >
+        <action
+            android:id="@+id/action_paziente_approfondimento_to_paziente_homepage"
+            app:destination="@id/paziente_homepage" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/nutrizionista_homepage"
+        android:name="it.polito.ic2020.did2020.fiitapp.NutrizionistaHomepage"
+        android:label="nutrizionista_homepage"
+        tools:layout="@layout/nutrizionista_homepage" >
+        <action
+            android:id="@+id/action_nutrizionista_homepage_to_nutrizionista_dettaglio_paziente"
+            app:destination="@id/nutrizionista_dettaglio_paziente" />
+        <action
+            android:id="@+id/action_nutrizionista_homepage_to_nutrizionista_impostazioni"
+            app:destination="@id/nutrizionista_impostazioni" />
+        <action
+            android:id="@+id/action_nutrizionista_homepage_to_frgmt_main"
+            app:destination="@id/frgmt_main" />
+    </fragment>
+    <fragment
+        android:id="@+id/nutrizionista_impostazioni"
+        android:name="it.polito.ic2020.did2020.fiitapp.NutrizionistaImpostazioni"
+        android:label="nutrizionista_impostazioni"
+        tools:layout="@layout/nutrizionista_impostazioni" >
+        <action
+            android:id="@+id/action_nutrizionista_impostazioni_to_frgmt_main"
+            app:destination="@id/frgmt_main" />
+    </fragment>
+        <action
+            android:id="@+id/action_nutrizionista_impostazioni_to_nutrizionista_homepage"
+            app:destination="@id/nutrizionista_homepage" />
+    <fragment
+        android:id="@+id/nutrizionista_dettaglio_paziente"
+        android:name="it.polito.ic2020.did2020.fiitapp.NutrizionistaDettaglioPaziente"
+        android:label="nutrizionista_dettaglio_paziente"
+        tools:layout="@layout/nutrizionista_dettaglio_paziente" >
+        <action
+            android:id="@+id/action_nutrizionista_dettaglio_paziente_to_nutrizionista_diariosettimanale2"
+            app:destination="@id/nutrizionista_diariosettimanale" />
+        <action
+            android:id="@+id/action_nutrizionista_dettaglio_paziente_to_pesatura"
+            app:destination="@id/nutrizionista_pesatura" />
+        <action
+            android:id="@+id/action_nutrizionista_dettaglio_paziente_to_nutrizionista_obiettivomensile"
+            app:destination="@id/nutrizionista_obiettivomensile" />
+        <action
+            android:id="@+id/action_nutrizionista_dettaglio_paziente_to_nutrizionista_pianoalimentare"
+            app:destination="@id/nutrizionista_pianoalimentare" />
+        <action
+            android:id="@+id/action_nutrizionista_dettaglio_paziente_to_nutrizionista_diariosettimanale"
+            app:destination="@id/nutrizionista_diariosettimanale" />
+        <action
+            android:id="@+id/action_nutrizionista_dettaglio_paziente_to_nutrizionista_homepage"
+            app:destination="@id/nutrizionista_homepage" />
+        <argument
+            android:name="idUtente"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nutrizionista_pesatura"
+        android:name="it.polito.ic2020.did2020.fiitapp.NutrizionistaPesatura"
+        android:label="nutrizionista_pesatura"
+        tools:layout="@layout/nutrizionista_pesatura">
+        <action
+            android:id="@+id/action_nutrizionista_pesatura_to_nutrizionista_dettaglio_paziente"
+            app:destination="@id/nutrizionista_dettaglio_paziente" />
+    </fragment>
+    <fragment
+        android:id="@+id/nutrizionista_obiettivomensile"
+        android:name="it.polito.ic2020.did2020.fiitapp.NutrizionistaObiettivoMensile"
+        android:label="nutrizionista_obiettivomensile"
+        tools:layout="@layout/nutrizionista_obiettivomensile">
+        <action
+            android:id="@+id/action_nutrizionista_obiettivomensile_to_nutrizionista_dettaglio_paziente"
+            app:destination="@id/nutrizionista_dettaglio_paziente" />
+    </fragment>
+    <fragment
+        android:id="@+id/nutrizionista_pianoalimentare"
+        android:name="it.polito.ic2020.did2020.fiitapp.NutrizionistaPianoAlimentare"
+        android:label="nutrizionista_pianoalimentare"
+        tools:layout="@layout/nutrizionista_pianoalimentare">
+        <action
+            android:id="@+id/action_nutrizionista_pianoalimentare_to_nutrizionista_dettaglio_paziente"
+            app:destination="@id/nutrizionista_dettaglio_paziente" />
+        <action
+            android:id="@+id/action_nutrizionista_pianoalimentare_to_nutrizionista_pianodettaglio"
+            app:destination="@id/nutrizionista_pianodettaglio" />
+    </fragment>
+        <fragment
+            android:id="@+id/nutrizionista_pianodettaglio"
+            android:name="it.polito.ic2020.did2020.fiitapp.NutrizionistaPianoDettaglio"
+            android:label="nutrizionista_pianodettaglio"
+            tools:layout="@layout/nutrizionista_pianodettaglio">
+            <action
+                android:id="@+id/action_nutrizionista_pianodettaglio_to_nutrizionista_pianoalimentare"
+                app:destination="@id/nutrizionista_pianoalimentare" />
+        </fragment>
+    <fragment
+        android:id="@+id/nutrizionista_diariosettimanale"
+        android:name="it.polito.ic2020.did2020.fiitapp.NutrizionistaDiarioSettimanale"
+        android:label="nutrizionista_diariosettimanale"
+        tools:layout="@layout/nutrizionista_diariosettimanale">
+        <action
+            android:id="@+id/action_nutrizionista_diariosettimanale_to_nutrizionista_dettaglio_paziente"
+            app:destination="@id/nutrizionista_dettaglio_paziente" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrazione1"
+        android:name="it.polito.ic2020.did2020.fiitapp.Registrazione1"
+        android:label="Registrazione1" >
+        <action
+            android:id="@+id/action_registrazione1_to_registrazione"
+            app:destination="@id/registrazione" />
+        <action
+            android:id="@+id/action_registrazione1_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_registrazione1_to_frgmt_main"
+            app:destination="@id/frgmt_main" />
+    </fragment>
+    <fragment
+        android:id="@+id/paziente_foto_profilo"
+        android:name="it.polito.ic2020.did2020.fiitapp.Paziente_foto_profilo"
+        android:label="Paziente_foto_profilo" >
+        <action
+            android:id="@+id/action_paziente_foto_profilo_to_paziente_homepage"
+            app:destination="@id/paziente_homepage" />
+    </fragment>
+    <fragment
+        android:id="@+id/pazienteImpostazioni"
+        android:name="it.polito.ic2020.did2020.fiitapp.PazienteImpostazioni"
+        android:label="PazienteImpostazioni" >
+        <action
+            android:id="@+id/action_pazienteImpostazioni_to_paziente_homepage"
+            app:destination="@id/paziente_homepage" />
+        <action
+            android:id="@+id/action_pazienteImpostazioni_to_frgmt_main"
+            app:destination="@id/frgmt_main" />
+    </fragment>
+</navigation>
